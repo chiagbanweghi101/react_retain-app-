@@ -2,6 +2,8 @@
 
 Retain is a personal expense and monthly budget app. The frontend is React, TypeScript, and Vite. The API is Express, and the data lives in MongoDB.
 
+Live app: https://retain-web-in3w.onrender.com
+
 ## Accounts
 
 Sign-up always creates a normal user. The admin account is seeded.
