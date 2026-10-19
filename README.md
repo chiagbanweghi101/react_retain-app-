@@ -12,11 +12,6 @@ Sign-up always creates a normal user. The admin account is seeded.
 | --- | --- | --- |
 | User | demo@retain.app | Demo123! |
 | Admin | admin@retain.app | Admin123! |
-| User | emmanuel@example.com | User123! |
-| User | moses@example.com | User123! |
-| User | perlin@example.com | User123! |
-| User | chiagoziem@example.com | User123! |
-| User | peter@example.com | User123! |
 
 The demo user already has expenses across three months: this month is approaching the budget, last month is over budget, and two months ago is within budget.
 
