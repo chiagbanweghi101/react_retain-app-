@@ -15,10 +15,10 @@ import type { AdminInsights, CategoryUsage } from "../types.ts";
 const CHART_COLORS = ["#7C3AED", "#22C55E", "#F59E0B", "#3B82F6", "#F43F5E", "#14B8A6", "#A855F7", "#FB923C"];
 
 const tooltipStyle = {
-  background: "#171A22",
-  border: "1px solid #2A2E3A",
+  background: "#FFFFFF",
+  border: "1px solid #E6E8EF",
   borderRadius: 12,
-  color: "#F4F4F5",
+  color: "#1F2937",
 };
 
 function RankList({ title, rows, accent }: { title: string; rows: CategoryUsage[]; accent: string }) {
@@ -39,7 +39,7 @@ function RankList({ title, rows, accent }: { title: string; rows: CategoryUsage[
                 {row.count}
               </Typography>
             </Stack>
-            <Box sx={{ height: 6, borderRadius: 99, bgcolor: "#2A2E3A", overflow: "hidden" }}>
+            <Box sx={{ height: 6, borderRadius: 99, bgcolor: "#E5E7EB", overflow: "hidden" }}>
               <Box sx={{ width: `${(row.count / max) * 100}%`, height: "100%", bgcolor: accent, borderRadius: 99 }} />
             </Box>
           </Box>
@@ -115,7 +115,7 @@ export function AdminPage() {
                               width: 8,
                               height: 8,
                               borderRadius: "50%",
-                              bgcolor: row.total > 0 ? CHART_COLORS[pieData.findIndex((item) => item.name === row.categoryName) % CHART_COLORS.length] : "#3F3F46",
+                              bgcolor: row.total > 0 ? CHART_COLORS[pieData.findIndex((item) => item.name === row.categoryName) % CHART_COLORS.length] : "#D1D5DB",
                               mr: 1,
                             }}
                           />
@@ -181,8 +181,8 @@ export function AdminPage() {
                         width: 36,
                         height: 36,
                         borderRadius: "50%",
-                        bgcolor: "#7C3AED33",
-                        color: "#C4B5FD",
+                        bgcolor: "#EDE9FE",
+                        color: "#6D28D9",
                         display: "grid",
                         placeItems: "center",
                         fontWeight: 700,
