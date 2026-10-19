@@ -39,7 +39,7 @@ The API seeds the demo accounts the first time the `retain` database is empty. T
 
 ## What a signed-in user can do
 
-- Create, view, update, and delete their own expenses. Each expense has a title, amount (ZAR), category, date, payment method, and optional notes.
+- Create, view, update, and delete their own expenses. Each expense has a title, amount (NGN), category, date, payment method, and optional notes.
 - Search by title or notes, filter by category, payment method, and date, and sort by date or amount. That state is in Redux. The list is paginated.
 - Set or update a budget for a selected month and see the total spent, the amount left, and a status of within, approaching, or over.
 - Open a dashboard for a selected month: total spent, remaining budget, highest expense, spending by category, and recent expenses.

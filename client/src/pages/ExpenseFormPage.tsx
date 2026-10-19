@@ -89,7 +89,7 @@ export function ExpenseFormPage({ mode }: { mode: "create" | "edit" }) {
       <PageHeader title={mode === "create" ? "Add expense" : "Edit expense"} />
       {error ? <Alert severity="error">{error}</Alert> : null}
       <TextField label="Title" value={title} onChange={(event) => setTitle(event.target.value)} required />
-      <TextField label="Amount (ZAR)" type="number" value={amount} onChange={(event) => setAmount(event.target.value)} required slotProps={{ htmlInput: { min: 0.01, step: 0.01 } }} />
+      <TextField label="Amount (NGN)" type="number" value={amount} onChange={(event) => setAmount(event.target.value)} required slotProps={{ htmlInput: { min: 0.01, step: 0.01 } }} />
       <TextField select label="Category" value={categoryId} onChange={(event) => setCategoryId(event.target.value)} required>
         {categories.map((category) => (
           <MenuItem key={category.id} value={String(category.id)}>{category.name}</MenuItem>

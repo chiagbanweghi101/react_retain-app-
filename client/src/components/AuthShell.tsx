@@ -46,7 +46,7 @@ export function AuthShell({ title, subtitle, children }: { title: string; subtit
           </Stack>
         </Box>
         <Typography variant="body2" sx={{ color: "rgba(244,244,245,0.55)" }}>
-          Amounts in South African rand.
+          Amounts in Nigerian naira.
         </Typography>
       </Box>
 

@@ -71,7 +71,7 @@ export function BudgetPage() {
             <Typography color="text.secondary">{remainingText(summary.remaining)}</Typography>
           </Stack>
           <Stack component="form" onSubmit={onSubmit} spacing={2}>
-            <TextField label="Budget amount (ZAR)" type="number" value={amount} onChange={(event) => setAmount(event.target.value)} required slotProps={{ htmlInput: { min: 0.01, step: 0.01 } }} />
+            <TextField label="Budget amount (NGN)" type="number" value={amount} onChange={(event) => setAmount(event.target.value)} required slotProps={{ htmlInput: { min: 0.01, step: 0.01 } }} />
             <Button type="submit" variant="contained" disabled={busy}>
               {busy ? "Saving..." : "Save budget"}
             </Button>

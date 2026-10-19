@@ -1,9 +1,9 @@
 import type { BudgetStatus } from "./types.ts";
 
 export function formatMoney(value: number): string {
-  return new Intl.NumberFormat("en-ZA", {
+  return new Intl.NumberFormat("en-NG", {
     style: "currency",
-    currency: "ZAR",
+    currency: "NGN",
     minimumFractionDigits: 2,
   }).format(value);
 }
