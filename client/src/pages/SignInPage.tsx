@@ -29,11 +29,12 @@ export function SignInPage() {
   }
 
   return (
-    <AuthShell title="Welcome back" subtitle="Sign in to your budget.">
-      <Stack component="form" onSubmit={onSubmit} spacing={2}>
+    <AuthShell title="Sign in">
+      <Stack component="form" onSubmit={onSubmit} spacing={2.25}>
         {error ? <Alert severity="error">{error}</Alert> : null}
         <TextField
-          label="Email"
+          placeholder="Email"
+          aria-label="Email"
           type="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
@@ -42,7 +43,8 @@ export function SignInPage() {
           autoComplete="email"
         />
         <TextField
-          label="Password"
+          placeholder="Password"
+          aria-label="Password"
           type={showPassword ? "text" : "password"}
           value={password}
           onChange={(event) => setPassword(event.target.value)}
@@ -61,12 +63,28 @@ export function SignInPage() {
             },
           }}
         />
-        <Button type="submit" variant="contained" size="large" disabled={busy} sx={{ py: 1.25, mt: 0.5 }}>
-          {busy ? "Signing in..." : "Sign in"}
-        </Button>
-        <Link component={RouterLink} to="/signup" underline="hover" sx={{ alignSelf: "flex-start" }}>
+        <Link component={RouterLink} to="/signup" underline="hover" sx={{ alignSelf: "flex-end", fontSize: 14 }}>
           New here? Create an account
         </Link>
+        <Button
+          type="submit"
+          variant="contained"
+          disabled={busy}
+          sx={{
+            alignSelf: "flex-start",
+            px: 4.5,
+            py: 1.1,
+            borderRadius: 999,
+            bgcolor: "#8BC34A",
+            color: "#FFFFFF",
+            textTransform: "none",
+            fontWeight: 700,
+            boxShadow: "none",
+            "&:hover": { bgcolor: "#7CB342", boxShadow: "none" },
+          }}
+        >
+          {busy ? "Signing in..." : "Sign in"}
+        </Button>
       </Stack>
     </AuthShell>
   );

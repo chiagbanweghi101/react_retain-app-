@@ -27,18 +27,43 @@ export function SignUpPage() {
   }
 
   return (
-    <AuthShell title="Create a user account">
-      <Stack component="form" onSubmit={onSubmit} spacing={2}>
+    <AuthShell title="Create account">
+      <Stack component="form" onSubmit={onSubmit} spacing={2.25}>
         {error ? <Alert severity="error">{error}</Alert> : null}
-        <TextField label="Name" value={name} onChange={(event) => setName(event.target.value)} required />
-        <TextField label="Email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
-        <TextField label="Password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} required helperText="At least 6 characters. New accounts are always normal users." />
-        <Button type="submit" variant="contained" disabled={busy}>
-          {busy ? "Creating..." : "Create account"}
-        </Button>
-        <Typography variant="body2">
+        <TextField placeholder="Name" aria-label="Name" value={name} onChange={(event) => setName(event.target.value)} required fullWidth />
+        <TextField placeholder="Email" aria-label="Email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} required fullWidth />
+        <TextField
+          placeholder="Password"
+          aria-label="Password"
+          type="password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          required
+          fullWidth
+          helperText="At least 6 characters. New accounts are always normal users."
+        />
+        <Typography variant="body2" sx={{ textAlign: "right" }}>
           Already have an account? <RouterLink to="/signin">Sign in</RouterLink>
         </Typography>
+        <Button
+          type="submit"
+          variant="contained"
+          disabled={busy}
+          sx={{
+            alignSelf: "flex-start",
+            px: 4.5,
+            py: 1.1,
+            borderRadius: 999,
+            bgcolor: "#8BC34A",
+            color: "#FFFFFF",
+            textTransform: "none",
+            fontWeight: 700,
+            boxShadow: "none",
+            "&:hover": { bgcolor: "#7CB342", boxShadow: "none" },
+          }}
+        >
+          {busy ? "Creating..." : "Create account"}
+        </Button>
       </Stack>
     </AuthShell>
   );
